@@ -5,11 +5,14 @@ namespace Vehicles {
     public class Vehicle{
 
 
-        public Vehicle(string registration, string dateCreated){
+        public Vehicle(string registration, string dateCreated, string name){
             this.Created = DateTime.Parse(dateCreated);
             this.Registration = registration;
+            this.Name = name;
         }
         public DateTime Created { get; private set;}
+
+        
 
    //     public string Registration {get; set;}
         private string registration;
@@ -31,6 +34,8 @@ namespace Vehicles {
                return DateTime.Now.Year - Created.Year;
             }
         }
+
+        public string Name{get; set;}
 
     }
 }
